@@ -2,7 +2,7 @@
 @Library('jenkins-shared-library')_
 
 pipeline {
-    agent none
+    agent { node { label 'docker' } }
     environment {
         //be sure to replace "sampriyadarshi" with your own Docker Hub username
         DOCKER_IMAGE_NAME = "sreedocker123/train-schedule"
